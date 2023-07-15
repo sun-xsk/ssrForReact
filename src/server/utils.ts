@@ -17,15 +17,17 @@ export function loadSsrEntryModul(vite: ViteDevServer | null) {
     } else {
         const entryPath = path.join(cwd, 'src/entry-server.tsx')
         return vite!.ssrLoadModule(entryPath)
-
-export function resolveTemplatePath() {
-    return isProd ? 
-    path.join(cwd,'dist/server/index.html') : 
-    path.join(cwd,'index.html')
+    }
 }
 
-export function mathPageUrl(url:string){
-    if(url === '/'){
+export function resolveTemplatePath() {
+    return isProd ?
+        path.join(cwd, 'dist/server/index.html') :
+        path.join(cwd, 'index.html')
+}
+
+export function mathPageUrl(url: string) {
+    if (url === '/') {
         return true
     }
 }
